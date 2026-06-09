@@ -91,7 +91,7 @@ if st.button("Analyze Review"):
                         
                     st.warning(f"📉 **Business Insight (AI Analysis):**\n\n{response.text}")
                 except Exception as e:
-                    st.error("The API key is invalid or an error occurred. Please check your credentials.")
+                   st.error(f"🚨 에러 상세 내용: {e}")
             else:
                 st.warning("📉 **Business Insight:** A complaint has been detected. Please provide a Google Gemini API key in the sidebar to receive tailored AI-driven strategic action plans.")
     else:
