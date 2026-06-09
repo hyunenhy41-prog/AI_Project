@@ -83,7 +83,7 @@ if st.button("Analyze Review"):
             if api_key:
                 try:
                     genai.configure(api_key=api_key)
-                    llm_model = genai.GenerativeModel('gemini-1.5-flash')
+                    llm_model = genai.GenerativeModel('gemini-pro')
                     
                     with st.spinner("🤖 AI is generating an immediate business action plan..."):
                         prompt = f"A customer left a negative review: '{user_input}'. The extracted complaint keywords are {keywords}. As an e-commerce management consultant, provide a concise, professional action plan in English (maximum 3 sentences) for the CS and product development teams to resolve this issue and improve customer satisfaction."
